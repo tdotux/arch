@@ -30,7 +30,7 @@ genfstab -U /mnt > /mnt/etc/fstab
 
 cd /mnt
 
-git clone http://github.com/eusouobn/arch
+git clone http://github.com/tdotux/arch
 
 arch-chroot /mnt
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Sy nano pacman-contrib reflector sudo grub efibootmgr
+pacman -Sy nano pacman-contrib reflector sudo grub efibootmgr --noconfirm
 
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && reflector --country Brazil --sort rate --save /etc/pacman.d/mirrorlist
 

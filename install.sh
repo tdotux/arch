@@ -14,7 +14,7 @@ parted /dev/sda mkpart primary ext4 301MiB 100%
 
 mkfs.fat -F32 /dev/sda1
 
-mkfs.ext4 -d /dev/sda2
+mkfs.ext4 /dev/sda2
 
 mount /dev/sda2 /mnt
 

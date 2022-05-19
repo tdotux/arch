@@ -2,8 +2,7 @@
 
 pacman -Sy nano pacman-contrib reflector sudo grub efibootmgr --noconfirm
 
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && curl -s "https://archlinux.org/mirrorlist/?country=BR&protocol=http&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | sudo rankmirrors -n 5 - | sudo tee /etc/pacman.d/mirrorlist
-
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && curl -s "https://archlinux.org/mirrorlist/?country=BR&protocol=http&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | sed -i '/br.mirror.archlinux-br.org/d' /etc/pacman.d/mirrorlist | rankmirrors -n 5 /etc/pacman.d/mirrorlist
 
 cp /etc/pacman.conf /etc/pacman.conf.bak && sudo sed -i '37c\ParallelDownloads = 16' /etc/pacman.conf && pacman -Syyyuuu --noconfirm
 

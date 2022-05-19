@@ -36,9 +36,7 @@ xdg-user-dirs-update
 
 systemctl enable NetworkManager lightdm
 
+truncate -s 0 /swapfile && chattr +C /swapfile && btrfs property set /swapfile compression "" && fallocate -l 4096M /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo -e '/swapfile none swap defaults 0 0\n' | tee -a /etc/fstab
+
+
 exit
-
-
-
-
-

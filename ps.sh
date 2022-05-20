@@ -30,7 +30,7 @@ cp /etc/sudoers /etc/sudoers.bak && sed -i '82c\ %wheel ALL=(ALL:ALL) ALL' /etc/
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --removable && grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S xorg-server xorg-xinit xterm xf86-video-vesa xf86-video-vmware xf86-input-vmmouse networkmanager network-manager-applet xfce4 xfce4-screenshooter xfce4-pulseaudio-plugin xfce4-whiskermenu-plugin ristretto mousepad galculator xarchiver file-roller tar gzip bzip2 zip unzip unrar p7zip thunar-archive-plugin lightdm lightdm-gtk-greeter pipewire pipewire-alsa pipewire-jack pipewire-pulse wireplumber xdg-user-dirs --noconfirm
+pacman -S xorg-server xorg-xinit xterm xf86-video-vesa xf86-video-vmware xf86-input-vmmouse networkmanager network-manager-applet xfce4 xfce4-screenshooter xfce4-pulseaudio-plugin xfce4-whiskermenu-plugin ristretto mousepad galculator xarchiver file-roller tar gzip bzip2 zip unzip unrar p7zip thunar-archive-plugin lightdm lightdm-gtk-greeter pipewire pipewire-alsa pipewire-jack pipewire-pulse wireplumber pavucontrol xdg-user-dirs --noconfirm
 
 xdg-user-dirs-update
 

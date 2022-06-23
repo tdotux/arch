@@ -41,10 +41,10 @@ printf '\x1bc';
 PS3=$'\nSelecione uma opção: ';
 echo -e "Lista de Dispositivos:"
 echo -e "\n"
-echo -e "Nome - Tamanho - Tipo"
+echo -e "Nome - Tam. - Tipo"
 echo -e "$devices_list"
 echo -e "\n"
-echo -e 'Escolha um Disco: '
+echo -e 'Escolha um Disco para Instalar o Sistema: '
 select installdisk in $devices_select; do
 echo "$installdisk";
 break

@@ -286,8 +286,8 @@ arch-chroot /mnt timedatectl set-ntp true
 
 ###FUSO HORÁRIO
 
-arch-chroot "ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime"
-arch-chroot "sed -i '/#NTP=/d' /etc/systemd/timesyncd.conf"
+arch-chroot /mnt "ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime"
+arch-chroot /mnt "sed -i '/#NTP=/d' /etc/systemd/timesyncd.conf"
 
 arch-chroot /mnt "sed -i 's/#Fallback//' /etc/systemd/timesyncd.conf"
 arch-chroot /mnt "echo \"FallbackNTP=0.pool.ntp.org 1.pool.ntp.org 0.fr.pool.ntp.org\" >> /etc/systemd/timesyncd.conf"
